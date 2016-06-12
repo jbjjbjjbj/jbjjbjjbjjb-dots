@@ -1,0 +1,49 @@
+
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+color=#E8DFD6
+
+[window title]
+command=xdotool getactivewindow getwindowname
+interval=3
+color=#9ED9D8
+min_width=1000
+align=center
+
+
+
+[cpu]
+label=
+interval=2
+
+
+[ip-address]
+label=
+interval=60
+
+
+[temperature]
+instance=Core
+label=
+interval=5
+color=#FF5879
+
+[volume]
+label=♪
+command=amixer get Master | grep -E -o '[0-9]{1,3}?%' | head -1
+interval=once
+signal=1
+# use 'pkill -RTMIN+1 i3blocks' after changing the volume
+
+
+[time]
+command=date '+%D %T'
+interval=5
+color=#7CBF9E
+
+
+[clickme]
+full_text=
+color=#EF5847
+command=/home/julian/shutprompt
