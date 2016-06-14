@@ -64,9 +64,9 @@ set $ws4 "4:  Floating /"
 set $ws5 "5: ♪ Musik /"
 set $ws6 "6:  Filer /"
 set $ws7 "7:  Steam /"
-set $ws8 "8:  Andet /"
-set $ws9 "9:  Andet /"
-set $ws0 "10  Lort /"
+set $ws8 "8:  Dokumenter F /"
+set $ws9 "9:  Dokumenter /"
+set $ws0 "10  Andet /"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -243,6 +243,14 @@ for_window [workspace="2"] floating enable
 for_window [workspace="4"] floating enable
 for_window [workspace="6"] floating enable
 for_window [workspace="7"] floating enable
+
+assign [class="google-chrome"] $ws1
+assign [class="Atom"] $ws3
+assign [class="steam"] $ws7
+assign [class="nautilus"] $ws6
+assign [class="Foxid"] $ws8
+assign [class="Libreoffice"] $ws9
+
 
 # class                 border  backgr. text    indicator child_border
 #client.focused          #000000 #000000 #ffffff #000000   #000000
