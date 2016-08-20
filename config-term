@@ -1,10 +1,35 @@
 [global_config]
-  borderless = True
-  title_inactive_bg_color = "#065f73"
-  title_inactive_fg_color = "#e8dfd6"
   title_transmit_bg_color = "#032c36"
+  title_inactive_fg_color = "#e8dfd6"
   title_transmit_fg_color = "#e8dfd6"
+  title_inactive_bg_color = "#065f73"
 [keybindings]
+[profiles]
+  [[custom]]
+    scrollbar_position = hidden
+    palette = "#032c36:#c2454e:#7cbf9e:#8a7a63:#2e3340:#ff5879:#44b5b1:#f2f1b9:#065f73:#ef5847:#a2d9b1:#beb090:#61778d:#ff99a1:#9ed9d8:#f6f6c9"
+    background_image = None
+    background_darkness = 0.77
+    background_type = transparent
+    use_system_font = False
+    cursor_color = "#e8dfd6"
+    foreground_color = "#e8dfd6"
+    show_titlebar = False
+    antialias = False
+    font = Terminus 12
+    background_color = "#032c36"
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    background_image = None
+    background_darkness = 0.87
+    background_type = transparent
+    use_system_font = False
+    foreground_color = "#e8dfd6"
+    show_titlebar = False
+    antialias = False
+    font = Terminus 10
+    background_color = "#032c36"
 [layouts]
   [[default]]
     [[[child1]]]
@@ -15,16 +40,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    antialias = False
-    background_color = "#032c36"
-    background_darkness = 0.92
-    background_image = None
-    cursor_color = "#e8dfd6"
-    font = Terminus 12
-    foreground_color = "#e8dfd6"
-    palette = "#032c36:#c2454e:#7cbf9e:#8a7a63:#2e3340:#ff5879:#44b5b1:#f2f1b9:#065f73:#ef5847:#a2d9b1:#beb090:#61778d:#ff99a1:#9ed9d8:#f6f6c9"
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
