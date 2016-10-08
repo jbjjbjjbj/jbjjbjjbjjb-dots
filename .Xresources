@@ -45,7 +45,7 @@
  *.color7:       #f2f1b9
  *.color15:      #f6f6c9
 
-
+rofi.terminal: terminator
 
 URxvt*geometry: 80x30
 URxvt*scrollBar: false
