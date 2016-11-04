@@ -51,7 +51,7 @@ ZSH_THEME="cloud"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history python sudo systemd web-search)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,3 +83,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+PATH=/home/julian/Scripts:$PATH
+alias rex="xrdb ~/.Xresources"
+alias lemon="~/.config/openbox/lemonbar | lemonbar -g 1355x20+5+5 -f terminus-9"
