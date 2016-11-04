@@ -1,0 +1,43 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+
+# Set wallpaper
+
+feh --bg-fill Billeder/walls/1920x1080-nebula_tylercreatesworlds_space_stars_space_art-28729.jpg 
+
+
+# Launch panels and xcomp
+
+~/.config/openbox/lemonbar | lemonbar -g 1355x20+5+5 -f terminus-9 &
+
+xcompmgr &
+tint2 &
+
+# Volume icon
+
+volumeicon &
+
+
+# Keyboard/Mouse shortcuts
+
+xbindkeys
+
+
+# Reload xresources 
+
+xrdb ~/.Xresources

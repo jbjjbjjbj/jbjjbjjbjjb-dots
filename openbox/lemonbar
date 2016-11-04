@@ -1,0 +1,49 @@
+#!/usr/bin/bash
+
+#Colors
+backCol="#AA0226"
+clockCol="#F52238"
+chargeCol="#27ae60"
+backCol="#00000000"
+
+# Define the clock
+Clock() {
+        DATETIME=$(date "+%a %R")
+
+        echo -n "$DATETIME"
+}
+
+#Define the battery
+Battery() {
+        BATPERC=$(acpi --battery | cut -d, -f2)
+        echo "$BATPERC"
+}
+
+#Define current window
+
+Workspace(){
+	Workspace=$(xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}')
+	echo "$Workspace"
+}
+
+# Get open program
+Program(){
+	Title=$(xdotool getactivewindow getwindowname)
+	echo "$Title"
+}
+
+# Print the clock
+
+while true; do
+				out="%{B$backCol}%{l} Skrivebord: $(Workspace)"
+				out="${out} %{c} $(Program)"
+				out="${out} %{r} Dato: $(Clock) "
+				if cat /sys/class/power_supply/BAT0/status | grep -q 'Dis'; then
+					out="${out} Bat: $(Battery) "
+				else
+					out="${out} %{B$chargeCol} Bat: $(Battery) "
+				fi
+				out="${out}%{B$backCol} "
+				echo $out
+        sleep 1
+done

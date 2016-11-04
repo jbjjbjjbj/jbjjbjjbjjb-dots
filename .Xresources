@@ -1,51 +1,52 @@
-! rofi bullshit
- ! bg fg bgalt hlbg hlfg
-! !-----------------------------------
- rofi.color-enabled: true
- !rofi.color-normal: #1f222d, #f3f4f5, #1f222d, #1f222d, #7780a1
- !rofi.color-urgent: #1f222d, #f3f4f5, #1f222d, #1f222d, #7780a1
- !rofi.color-active: #1f222d, #f3f4f5, #1f222d, #1f222d, #7780a1
- !rofi.color-window: #1f222d, #4b4f5c
- rofi.separator-style: solid
+!#include ".colors/sourcerer_mod"
+!#include ".colors/self_light"
+#include ".colors/contrast_need"
+URxvt*termName: rxvt-unicode
 
- ! special
- *.foreground:   #e8dfd6
- *.background:   #021b21
- *.cursorColor:  #e8dfd6
+URxvt*cursorBlink:  true
 
- ! black
- *.color0:       #032c36
- *.color8:       #065f73
+URxvt.intensityStyles: true
+URxvt.scrollBar: false
+URxvt.iso14755: true
+URxvt.iso14755_52: true
+URxvt*utf-8: 1
+URxvt*imLocale: es_ES.utf-8
 
- ! red
- *.color1:       #c2454e
- *.color9:       #ef5847
+URxvt*font: xft:Droid\ Sans\ Mono:regular:size=9:antialias=true:hinting=true
+!URxvt*font: xft:terminus:regular:size=10:antialias=true:hinting=true
 
- ! green
- *.color2:       #7cbf9e
- *.color10:      #a2d9b1
+URxvt.internalBorder: 5
+URxvt.letterSpace: -1
+URxvt.shading:		15
 
- ! yellow
- *.color3:       #8a7a63
- *.color11:      #beb090
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
 
- ! blue
- *.color4:       #2e3340
- *.color12:      #61778d
+URxvt.perl-ext-common: default,matcher,clipboard,keyboard-select,url-select
+URxvt.url-launcher: /usr/bin/surf
+URxvt.urlButton: 1
+URxvt.underlineURLs: True
 
- ! magenta
- *.color5:       #ff5879
- *.color13:      #ff99a1
+URxvt.clipboard.autocopy: true
+URxvt.clipboard.copycmd: xclip -in -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 
- ! cyan
- *.color6:       #44b5b1
- *.color14:      #9ed9d8
+! Keybindings
+URxvt.keysym.Mod4-c: perl:clipboard:copy
+URxvt.keysym.Mod4-v: perl:clipboard:paste
+URxvt.keysym.Mod4-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.C-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: surf
+URxvt.url-select.video: mpv
+URxvt.url-select.button: 1
 
- ! white
- *.color7:       #f2f1b9
- *.color15:      #f6f6c9
-
-rofi.terminal: terminator
-
-URxvt*geometry: 80x30
-URxvt*scrollBar: false
+! Mine farver
