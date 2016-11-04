@@ -15,14 +15,13 @@
       type = Window
 [plugins]
 [profiles]
-palette = #EDCD96:#D1B494:#ACC4AE:#1F324C:#605A60:#3E434E:#A7A696:#927266:#DFA66E:#6B7785:#E3D0A8:#1B1E30:#A78C73:#F3E7CA:#6EA4A1:#AE643A
-    antialias = False
-    background_color = "#032c36"
-    background_darkness = 0.82
+  [[default]]
+    background_color = "#2f343f"
+    background_darkness = 0.96
     background_image = None
     background_type = transparent
-    font = Terminus 10
-    foreground_color = "#e8dfd6"
+    font = Ubuntu Mono 11
+    foreground_color = "#f9f9f9"
     palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
     scrollbar_position = hidden
     show_titlebar = False
